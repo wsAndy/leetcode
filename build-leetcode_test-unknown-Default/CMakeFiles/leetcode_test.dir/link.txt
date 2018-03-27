@@ -1,0 +1,1 @@
+/usr/bin/g++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/leetcode_test.dir/main.cpp.o  -o leetcode_test  
