@@ -12,17 +12,29 @@ int main()
     num.push_back(11);
     num.push_back(15);
 
-    vector<int> num_sort;
+    vector<int> num;
     sort(num.begin(), num.end());
 
     int place = 0;
-    for(int i = 0; i < num_sort.size()-1; ++i)
+    for(int i = 0; i < num.size()-1; ++i)
     {
-        if(target > num_sort[i] && target < num_sort[i+1])
+        if(target > num[i] && target < num[i+1])
         {
             place = i;
+            break;
         }
     }
+
+    int st = 0;
+    for(int i = 0; i < place; ++i)
+    {
+        if(num[i] + num[place] == target)
+        {
+            st = i;
+            break;
+        }
+    }
+
 
 
     return 0;
